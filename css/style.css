@@ -459,6 +459,7 @@ footer p {
 }
 
 .contact-message {
+    font-family: 'Arial', sans-serif;
     border: none;
     outline: none;
     background: transparent;
