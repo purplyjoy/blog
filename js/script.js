@@ -1,11 +1,74 @@
+//SEE MORE...
 document.addEventListener("DOMContentLoaded", () => {
-    const blogContainer = document.querySelector('.daily-blog');
-    const blogEntries = [...blogContainer.querySelectorAll('.blog-content')];
-    blogEntries.reverse().forEach(entry => blogContainer.appendChild(entry));
+    document.querySelectorAll('.life-blog, .interest-blog, .reflection-blog').forEach(blogSection => {
+        const entries = [...blogSection.querySelectorAll('.blog-content')];
+        entries.reverse().forEach(entry => blogSection.appendChild(entry));
+    });
 
-    document.querySelectorAll('.preview').forEach(el => {
-        el.addEventListener('click', function () {
-            this.closest('.blog-content').classList.toggle('active');
+    document.querySelectorAll('.blog-content').forEach(entry => {
+        entry.querySelector('.preview')?.addEventListener('click', function () {
+            entry.classList.toggle('active');
         });
     });
+});
+
+//SIDEBAR BUTTON
+const toggleBtn = document.getElementById("sidebarToggle");
+const sidebar = document.getElementById("sidebar");
+const sidebarIcon = document.getElementById("sidebarIcon");
+
+toggleBtn.addEventListener("click", () => {
+    sidebar.classList.toggle("show");
+    if (sidebar.classList.contains("show")) {
+        sidebarIcon.src = "../imgs/close-symbol.png";
+    } else {
+        sidebarIcon.src = "../imgs/sidebar-icon.png";
+    }
+});
+
+//SIDEBAR
+const sections = document.querySelectorAll("section[id]");
+const sidebarLinks = document.querySelectorAll(".sidebar a");
+
+const observer = new IntersectionObserver((entries) => {
+    let visibleSection = null;
+
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            if (
+                !visibleSection ||
+                entry.intersectionRatio > visibleSection.intersectionRatio
+            ) {
+                visibleSection = entry;
+            }
+        }
+    });
+
+    if (visibleSection) {
+        sidebarLinks.forEach(link => link.classList.remove("active"));
+
+        const activeLink = document.querySelector(
+            `.sidebar a[href="#${visibleSection.target.id}"]`
+        );
+
+        if (activeLink) {
+            activeLink.classList.add("active");
+        }
+    }
+}, {
+    threshold: [0.2, 0.4, 0.6, 0.8]
+});
+
+sections.forEach(section => observer.observe(section));
+
+window.addEventListener("scroll", () => {
+    const atBottom =
+        window.innerHeight + window.scrollY >= document.body.offsetHeight - 20;
+
+    if (atBottom) {
+        sidebarLinks.forEach(link => link.classList.remove("active"));
+
+        document.querySelector('.sidebar a[href="#gallery"]')
+            .classList.add("active");
+    }
 });
