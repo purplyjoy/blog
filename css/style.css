@@ -177,9 +177,9 @@ section {
     overflow: hidden;
 }
 
-.blog-posts h1 {
+.blog-posts h2 {
     font-family:'Courier New', Courier, monospace;
-    margin-top: 50px;
+    margin: 50px 0 0 100px;
     opacity: 0;
     animation: fadeIn 0.6s ease-out forwards;
     animation-delay: 0.2s; 
@@ -238,7 +238,7 @@ section {
     margin: 0 auto;
 }
 
-.box h1 {
+.box h3 {
     text-decoration: none;
     text-align: center;
     font-size: 20px;
@@ -247,7 +247,7 @@ section {
     border-bottom: 2px solid #cdc5f3;
 }
 
-.box h2 {
+.box h4 {
     margin-left: 5px;
     font-size: 15px;
 }
@@ -485,8 +485,8 @@ footer p {
     scrollbar-gutter: stable;
 }
 
-.blog-texts h1{
-    font-size: 25px;
+.blog-texts h3 {
+    font-size: 20px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
@@ -575,13 +575,13 @@ footer p {
 .images-title {
     position: absolute;
     bottom: 14px;
-    top: 55px;
-    right: 50px;
+    top: 50%;
+    right: 0;
     width: 100%;
     text-align: center;
 }
 
-.images-title h1 {
+.images-title h2 {
     font-size: 20px;
     color: white;
     opacity: 0;
@@ -590,7 +590,7 @@ footer p {
     text-shadow: 0 2px 6px rgba(0,0,0,0.6);
 }
 
-.images:hover .images-title h1 {
+.images:hover .images-title h2 {
     opacity: 1;
     transform: translateY(0);
 }
@@ -709,7 +709,7 @@ footer p {
 .connect {
     font-size: 15px;
     width: 400px;
-    margin-bottom: 80px;
+    margin-bottom: 50px;
 }
 
 .email {
@@ -719,17 +719,21 @@ footer p {
 }
 
 .email img {
-    width: 40px;
+    width: 30px;
+}
+
+.email-text {
+    text-decoration: underline; color:black;
 }
 
 .contacts {
     margin-right: 170px;
     display: flex;
-    gap: 10px;
+    gap: 15px;
 }
 
 .contacts img {
-    width: 40px;
+    width: 30px;
 }
 
 /*SCENERY PAGE*/
@@ -868,7 +872,7 @@ footer p {
         text-align: center;
     }
 
-    .images-title h1 {
+    .images-title h2 {
         opacity: 1;
         transform: translateY(0);
     }
