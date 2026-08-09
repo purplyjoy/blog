@@ -4,18 +4,23 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Home</title>
-        <link rel="icon" type="images/png" href="imgs/logo2.png">
+        <link rel="icon" type="image/png" href="imgs/logo2.png">
         <link rel="stylesheet" href="css/style.css">
     </head>
     
     <body>
-        <nav class="navigation">
+
+        <!-- navigation bar -->
+        <nav>
             <img src="imgs/logo2.png" alt="Logo">
             <ul class="nav-links">
+
+                <!-- pages -->
                 <li><a class="active" href="index.html">Home</a></li>
                 <li><a href="pages/blog.html">Blog</a></li>
                 <li><a href="pages/contact.html">Contact</a></li>
 
+                <!-- socials -->
                 <li><a href="https://www.facebook.com/joyce.lodana" target="_blank"  rel="noopener">
                     <img src="imgs/fb-logo.png" alt="Facebook">
                 </a></li>
@@ -25,14 +30,40 @@
             </ul>
         </nav>
 
-        <div class="container1">         
-            <h1>PIECES OF MY LIFE</h1>
-            <p>Welcome to my safe space, a place to share my stories, thoughts, and everyday moments.</p>
-            <img src="imgs/pic2.jpg" alt="Pic2">
-        </div>
+        <main>
+            <!--hero section / intro-->
+            <div class="hero-section">         
+                <h1>PIECES OF MY LIFE</h1>
+                <p>Welcome to my safe space, a place to share my stories, thoughts, and everyday moments.</p>
+                <img src="imgs/pic2.jpg" alt="Pic2">
+            </div>
 
-        <div class="container2">
-            <div class="content2">
+            <!--blog posts-->
+            <div class="blogs-container">
+
+                <!--moments blog posts-->
+                <div class="blog-posts">
+                    <h2>Moments</h2>
+                    <div class="boxes">
+                        <div class="box">
+                            <a href="pages/blog.html#old-days-blog"><img src="imgs/blog4.jpg" alt="with my childhood friends" class="photo"></a>
+                            <h3>The Old Days</h3>
+                            <h4>Joyce Llorera</h4>
+                            <p>Feb 25, 2026</p>
+                            <img src="imgs/heart.png" alt="Heart React" class="heart-icon">
+                        </div>
+
+                        <!-- <div class="box">
+                            <a href="pages/blog.html#music-blog"><img src="imgs/music.jpg" alt="Music" class="photo"></a>
+                            <h3>Music</h3>
+                            <h4>Joyce Llorera</h4>
+                            <p>Feb 26, 2026</p>
+                            <img src="imgs/heart.png" alt="Heart React" class="heart-icon">
+                        </div> -->
+                    </div>
+                </div>
+
+                <!--Interests & Hobbies blog posts-->
                 <div class="blog-posts">
                     <h2>Interests & Hobbies</h2>
                     <div class="boxes">
@@ -75,50 +106,35 @@
                             <p>Feb 26, 2026</p>
                             <img src="imgs/heart.png" alt="Heart React" class="heart-icon">
                         </div>
-
                     </div>
-                </div>
+                </div> 
 
+                <!--Reflections blog posts-->
                 <div class="blog-posts">
-                    <h2>Slice of Life</h2>
+                    <h2>Reflections</h2>
                     <div class="boxes">
                         <div class="box">
-                            <a href="pages/scenery.html"><img src="imgs/mayon.jpg" alt="Mayon Volcano" class="photo"></a>
-                            <h3>Scenery</h3>
+                            <a href="pages/blog.html#childhood-blog"><img src="imgs/childhood.jpg" alt="Childhood" class="photo"></a>
+                            <h3>The Child I Was</h3>
                             <h4>Joyce Llorera</h4>
-                            <p>Feb 24, 2026</p>
-                            <img src="imgs/heart.png" alt="Heart React" class="heart-icon">
+                            <p>Aug 07, 2026</p>
+                            <img src="imgs/heart.png" alt="Heart" class="heart-icon">
                         </div>
-
-                        <div class="box">
-                            <a href="pages/blog.html#music-blog"><img src="imgs/music.jpg" alt="Music" class="photo"></a>
-                            <h3>Music</h3>
-                            <h4>Joyce Llorera</h4>
-                            <p>Feb 26, 2026</p>
-                            <img src="imgs/heart.png" alt="Heart React" class="heart-icon">
-                        </div>
-                    </div>
-                </div>  
-
-                <div class="blog-posts">
-                    <h2>Reflections and Reveries</h2>
-                    <div class="boxes">
                         <div class="box">
                             <a href="pages/blog.html#careers-blog"><img src="imgs/careers.jpg" alt="Careers" class="photo"></a>
                             <h3>Dream Careers</h3>
                             <h4>Joyce Llorera</h4>
                             <p>Aug 05, 2026</p>
                             <img src="imgs/heart.png" alt="Heart React" class="heart-icon">
-                        </div>
-                        
+                        </div>   
                     </div>
                 </div> 
             </div>
-        </div>
-        <a href="pages/blog.html" class="all-posts">View All Posts &#8594</a>
 
-        <div class="gallery">
+            <!--all posts button to blog page-->
+            <a href="pages/blog.html" class="all-posts">View All Posts &#8594;</a>
 
+            <!--gallery-->
             <div class="gallery-content">
                 <div class="images">
                     <a href="pages/scenery.html#img-gallery" ><img src="imgs/scene3.jpg" alt="Scenery">
@@ -142,8 +158,9 @@
                     </a>
                 </div>
             </div>
-        </div>
 
+        </main>
+        
         <footer>
             <p>"Life has got all those twists and turns. You've got to hold on tight and off you go."</p>
             <div class="foot-contacts">

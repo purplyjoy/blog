@@ -4,17 +4,22 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Blog</title>
-        <link rel="icon" type="images/png" href="../imgs/logo2.png">
+        <link rel="icon" type="image/png" href="../imgs/logo2.png">
         <link rel="stylesheet" href="../css/style.css">
     </head>
     <body>
-        <nav class="navigation">
+
+        <!-- NAVIGATION BAR -->
+        <nav>
             <img src="../imgs/logo2.png" alt="Logo">
             <ul class="nav-links">
+
+                <!--pages-->
                 <li><a href="../index.html">Home</a></li>
                 <li><a class="active" href="blog.html">Blog</a></li>
                 <li><a href="contact.html">Contact</a></li>
 
+                <!--socials-->
                 <li><a href="https://www.facebook.com/joyce.lodana" target="_blank"  rel="noopener">
                     <img src="../imgs/fb-logo.png" alt="Facebook">
                 </a></li>
@@ -24,26 +29,31 @@
             </ul>
         </nav>
 
-        <div class="sidebar-container">
-            <button class="sidebar-toggle" id="sidebarToggle">
-                <img src="../imgs/sidebar-icon.png" alt="Sidebar" id="sidebarIcon">
-            </button>
-            <div class="sidebar" id="sidebar">
-                <a class="active" href="#life-blog">Slice of Life</a>
-                <a href="#interest-blog">Interests & Hobbies</a>
-                <a href="#reflection-blog">Reflections and Reveries</a>
-                <a href="#gallery">Gallery</a>
+        <main>
+
+            <!--sidebar button-->
+            <div class="sidebar-container">
+                <button class="sidebar-toggle" id="sidebarToggle">
+                    <img src="../imgs/sidebar-icon.png" alt="Sidebar" id="sidebarIcon">
+                </button>
+                <div class="sidebar" id="sidebar">
+                    <a class="active" href="#life-blog">Moments</a>
+                    <a href="#interest-blog">Interests & Hobbies</a>
+                    <a href="#reflection-blog">Reflections</a>
+                    <a href="#gallery">Gallery</a>
+                </div>
             </div>
-        </div>
 
-        <h1 class="blog-title">ALL POSTS</h1>
-
+            <h1 class="blog-title">ALL POSTS</h1>          
+        
+            <!--blog posts-->
             <div class="blog-container">
 
+                <!--moments blog posts-->
                 <section class="life-blog" id="life-blog">
-                    <h2 class="blog-topic-title">Slice of Life</h2>
+                    <h2 class="blog-topic-title">Moments</h2>
 
-                    <article id="diary1-blog" class="blog-content" data-date="2026-02-22">
+                    <!-- <article id="diary1-blog" class="blog-content" data-date="2026-02-22">
                         <img src="../imgs/blog1.jpg" alt="Blog1">
                         <div class="blog-texts">
                             <p class="blog-date"><b>Feb 22, 2026</b></p>
@@ -56,9 +66,9 @@
                                 Once I completed the layout, I took some time to rest and planned to start building the actual website the following day. I'm looking forward to finishing this portfolio because it gives me the opportunity to present who I am, including my interests and personal goals. Since the website also features a blog, I'm glad to have a place where I can share my experiences and moments from my life.
                             </p>
                         </div>
-                    </article>
+                    </article> -->
 
-                    <article id="diary2-blog" class="blog-content" data-date="2026-02-23">
+                    <!-- <article id="diary2-blog" class="blog-content" data-date="2026-02-23">
                         <img src="../imgs/blog2.jpg" alt="Blog2">
                         <div class="blog-texts">
                             <p class="blog-date"><b>Feb 23, 2026</b></p>
@@ -74,9 +84,9 @@
                                 Even though I haven't finished an entire page yet, I made some progress. I am now able to understand how the Git works and getting familiar of the steps after I add and commit, which is to git pull where I have to merge the folders and files in the shared repository. It is a very important step because that way, both me and my partner can commit on our own directory without affecting someone else's work in the shared repository.
                             </p>          
                         </div>
-                    </article>
+                    </article> -->
 
-                    <article id="diary3-blog" class="blog-content" data-date="2026-02-24">
+                    <!-- <article id="diary3-blog" class="blog-content" data-date="2026-02-24">
                         <img src="../imgs/blog3.jpg" alt="Blog3">
                         <div class="blog-texts">
                             <p class="blog-date"><b>Feb 24, 2026</b></p>
@@ -94,32 +104,25 @@
                                 Today felt like a really long day because I spent most of my time focused on working on the website. Even though it was tiring, I enjoyed the process, which made the work feel easier and more fulfilling.
                             </p>
                         </div>
-                    </article>
+                    </article> -->
 
-                    <article id="diary4-blog" class="blog-content" data-date="2026-02-25">
+                    <article id="old-days-blog" class="blog-content" data-date="2026-02-25">
                         <img src="../imgs/blog4.jpg" alt="Blog4">
                         <div class="blog-texts">
                             <p class="blog-date"><b>Feb 25, 2026</b></p>
-                            <h3>Blog Entry #4</h3>
+                            <h3>The Old Days</h3>
 
                             <p class="preview">
-                                During the creation of my portfolio website, I recalled many memories that I preserved through images. I was just looking for a photo of a scenery I had captured before, but then I caught a glimpse of past events in my life.
+                                During the creation of my blog website, I recalled many memories that I preserved through images. I was just looking for a photo of a scenery I had captured before, but then I caught a glimpse of past events in my life.
                                 <br><br>
                                 This image is one of those that reminded me of momens in my life. It was taken during a summer break, when I was just about to become a college student. I was with my childhood best friends, Riza and Roselyn, who are now both in their first year in college. We used to hangout all the time back when we're still in elementary and high school, and this was one of our bonding, secretly riding a motorcycle with Riza guiding us. I tried driving by myself even with my fear of getting into an accident, not because of getting hurt, but because none of my parents knew that I was outside and doing a dangerous act. They didn’t want me to learn to ride a motorcycle because they thought it was dangerous, but my stubborn younger self did the opposite. Even so, I never truly had the chance to learn how to ride properly. Luckily, we didn't get into an accident that time; rather, we had a lot of fun and enjoyed our time together. 
                                 <br><br>
-                                But I didn't know that it would be the last time I could try to ride a motorcycle because we can't ride together anymore. Even though we're neighbors and we literally just have to walk a few steps to get to each other's houses, we never really have time to hangout now. We're all busy with our own lives, and we only get the chance to see each other once in blue moon. Luckily, we were able to go out together last January 8, because of Riza's birthday, which was a year after our last hangout with all the three of us present. Because of conflicting schedules, we rarely get to be together as a complete group. With this simple image, I recalled a lot of memories and the emotions I had at that time. It made me miss them more, and I hope we see each other again soon.            
-                                <br><br>
-                                Another memory that I recalled was just last year. I saw the images that I captured using the iPad. It was the time when my phone broke and I didn't have a replacement so I had to use my sister's iPad, bringing it outside even if it's too big and heavy. I remembered how unfamiliar the vibe was during that time, when I had to carry that big iPad, to take pictures or watch videos, which would really catch someone else's attention. I know it's normal to use an iPad, but it's really weird and unfamiliar for me because that was the first time in my life that I had to use an iPad for my daily activities.
-                                <br><br>
-                                It felt even weirder because I lost access to my Instagram and Facebook accounts. It really frustrated me because I treasure those accounts. They are one of the ways I can relive moments of my life. I no longer have access to those social media accounts and I had to make new ones. Since then, my life has been different, quiet but not peaceful. I felt like I was away from a few people. My life have been a little quieter because my social media accounts are empty. That's when I realized how dependent I had become on the Internet, I realize how my world revolved around it. 
-                                <br><br>
-                                Although it may have negative effects on me, I am thankful for having technology because it is also a way to preserve and relive moments from my life. Since I lost my phone, I didn't have the chance to recover some of the photos I've kept there. I forgot to upload them to my Gdrive, where I keep the important images I want to save. From now on, whenever there's something to keep, I immediately upload it to Gdrive. I am thinking of other ways to preserve my photos, but this one works good for me. 
-                                <br><br>
-                                During that timeline of my life — losing my phone and had to use an iPad, losing access to my social media accounts and making new ones, and forgetting to upload some of my cherished moments to Gdrive,  then learning to always upload them from now on — I experienced so many emotions and that it almost felt strange. Those images that I captured using the iPad are all here on my current device and also uploaded to the Gdrive. And those images that I forgot to upload, I guess I'll just have to recall them through my own memory.
+                                But I didn't know that it would be the last time I could try to ride a motorcycle because we can't ride together anymore. Even though we're neighbors and we literally just have to walk a few steps to get to each other's houses, we never really have time to hangout now. We're all busy with our own lives, and we only get the chance to see each other once in blue moon. Luckily, we were able to go out together last January 8, because of Riza's birthday, which was a year after our last hangout with all the three of us present. Because of conflicting schedules, we rarely get to be together as a complete group. With this simple image, I recalled a lot of memories and the emotions I had at that time. It made me miss them more, and I hope we see each other again soon.              
                             </p>
-                        </div>
+                        </div> 
                     </article>
-
+                    
+                    <!-- 
                     <article id="diary5-blog" class="blog-content" data-date="2026-02-26">
                         <img src="../imgs/memories1.jpg" alt="Blog5">
                         <div class="blog-texts">
@@ -132,9 +135,11 @@
                                 Looking back at my past experiences while writing for the memories blog made me emotional. While taking pictures of my photo albums and diaries, I became teary, reminiscing about those moments. I remembered how much I loved writing in my diary, documenting my days and the emotions I felt. I really miss the times when I was always writing and decorating my notebooks. Since my senior high school days, my daily life has mostly revolved around my phone. Even so, I continue to write diaries in my phone’s Notes app because I want to preserve and remember my experiences. Although life has changed, a part of my past still lingers in the present. I will never forget who I used to be and the things I loved doing before.
                             </p>
                         </div>
-                    </article>
+                    </article> -->
+
                 </section>
 
+                <!--interest blog posts-->
                 <section class="interest-blog" id="interest-blog">
                     <h2 class="blog-topic-title">Interests & Hobbies</h2>
 
@@ -235,8 +240,9 @@
                     </article>
                 </section> 
                 
+                <!--reflection blog posts-->
                 <section class="reflection-blog" id="reflection-blog">
-                    <h2 class="blog-topic-title">Reflections and Reveries</h2>
+                    <h2 class="blog-topic-title">Reflections</h2>
                     
                     <article id="careers-blog" class="blog-content" data-date="2026-08-05">
                         <img src="../imgs/careers.jpg" alt="Careers">
@@ -264,22 +270,22 @@
                         </div>
                     </article>
 
-                    <article id="childhood-blog" class="blog-content" data-date="2026-08-06">
+                    <article id="childhood-blog" class="blog-content" data-date="2026-08-07">
                         <img src="../imgs/childhood.jpg" alt="Childhood">
                         <div class="blog-texts">
-                            <p class="blog-date"><b>Aug 06, 2026</b></p>
+                            <p class="blog-date"><b>Aug 07, 2026</b></p>
                             <h3>The Child I Was</h3>
 
                             <p class="preview">
-                                There was once a time I wanted to be an adult already. I wished to time travel to the future and live my dream. Like a fast-forward. I wanted to skip to the hard times and finally get to experience a peaceful and stable life. As a child, I wanted to finally become an adult and get to decide on my own. Live on my own. 
+                                There was a time when all I wanted was to grow up. I wished I could fast-forward into the future, skip waiting, and become the adult I imagined. I thought adulthood meant freedom—the chance to make my own decisionos, live on my own, and finally build the peaceful, stable life I dreamed of. As a child, I couldn't wait to leave childhood behind.
                                 <br><br>
-                                But now I realized, I don't wanna be an adult anymore. I wanna go back to being a child. Loud, carefree, and experiencing things that made me forget how hard life is. I loved being a child. I can play whenever I want. I can even throw a tantrum when I don't get what I want. I received christmas gifts from my godparents. And less problem and pressure. I can't do and have that as an adult anymore. I've changed, a lot. I'm not that loud and lively kid anymore.
+                                But somewhere along the way, that dream changed. Now, I find myself wishing I could go back. I wanna go back to being a kid. Back to being the loud, carefree child who laughed without thinking twice and found happiness in the simplest things. A kid who spent afternoons playing until the sun went down, threw trantrums over little things, and looked forward to Christmas gifts. Back then, life felt lighter. There were fewer worries, fewer expecations and pressuer, fewer burdens to carry. Growing up gave me the freedom I once longed for, but it also came with responsibilities I never truly understood as a child. Looking back, I realized how much I've changed. I'm no longer the loud and lively kid I used to be. The child who once couldn't wait to become an adult is now an adult who quietly misses being a child.
                                 <br><br>
-                                I remember how I used to play all day long. From morning to night, I'm outside playing with friends. We'd play hide & seek, playing house, running in the rain and playing with mud, and experiment mixing and cooking leaves and flowers. I guess I've played all the games that children play. I was an adventurous kid. I'd go to places my parents didn't even know I've gone to. I often go the farmfield not too far from home. We would walk there in broad daylight and pick fruits and flowers on the way. And even carry a bag of mangoes on our way home. That was my favorite memory from childhood. That's our way to spend time and hang out together. I also used to go to the computer at the neighbor barangay because there wasn't any at our place. So, we would go there to play games, and even do our homeworks that needs computerized and printed. I didn't my have my own phone that time, because I was still a child, which was normal of that time. Children are not yet exposed to gadgets and were all outside playing.   
+                                I remember how I used to spend my days playing from morning until night. Most of my childhood was spent outside with friends, making our own adventures. We'd play hide-and-seek, play house, run in the rain, splash around in the mud, and pretend we're chefs by mixing leaves and flowers into our own little recipes. I think I've played all the games that children play. I was an adventorous kid. I would wander off to places my parents didn't knwo I had fone. I often go to the rice fields not too far from our home. We would walk there under the bright afternoon sun, picking fruits and flowers along the way. Sometimes, we'd even come home carrying a bag full of mangoes. Those simple trips became some of my favorite childhood memories. That was our way of spending time together, creating fun out of the ordinary.
                                 <br><br>
-                                I'm not all about playing games when I was a child. I am still a good student. I was a consistent honor student in elementary. I was one of those top students in our batch and was really active at school organizations. I participated in a lot of school activities and competitions. Oh, how I missed those times. I had this unforgettable memory during a school event. I was the representative of our grade level for storytelling competition for the event of Buwan ng Wika (National Language Month). I 
+                                I used to have a small bike that I rode everywhere whenever my friends went somewhere. It was one of my most treasured childhood possessions because receiving gifts was rare for our family. I didn't have many toys growing up, so having that bike made it incredibly special to me, and I cherished it with all my heart. One day, I tagged along with my older sister as she went to a neighboring barangay to print her homework. She walked with her classmates while I happily rode my little bike beside them. Feeling proud, I offered to carry the freshly printed paper in the small basket at the front of my bike. I thought I was helping. As we were going downhill, one of her male classmates suddenly stepped in front of me and blocked my way. I couldn't stop in time. Thankfully, I only crashed into a pile of sand, but my sister's paper was badly crumpled. I remember feeling embarrassed and upset. After that day, I stopped tagging along whenever she was with her classmates. I preferred staying with my own friends instead. Looking back, that memory reminds me that childhood isn't made up of happy moments alone. We often remember childhood as carefree and full of laughter, but it also comes with moments of embarrassment, disappointment, and even resentment. As children, our emotions feel so intense. I genuinely hated that boy for what happened, and for a while, that memory stayed with me. Now, years later, I can't even remember who he was. It's funny how the people who once seemed so important in our childhood slowly fade into strangers, while the feelings they left behind become lessons instead. What once felt like a big, unfair moment has become just another story that makes me smile. 
                                 <br><br>
-                                <br><br>
+                                
                                 <br><br>
                             </p>
                         </div>
@@ -287,33 +293,35 @@
                 </section>
             </div>  
 
-        <section id="gallery" class="gallery">
-            <h1>Gallery</h1>
+            <!--gallery-->
+            <section id="gallery" class="gallery">
+                <h1>Gallery</h1>
 
-            <div class="gallery-content">
-                <div class="images">
-                    <a href="../pages/scenery.html#img-gallery" ><img src="../imgs/scene3.jpg" alt="Scenery">
-                    <div class="images-title">
-                        <h2>Scenery</h2>
+                <div class="gallery-content">
+                    <div class="images">
+                        <a href="../pages/scenery.html#img-gallery" ><img src="../imgs/scene3.jpg" alt="Scenery">
+                        <div class="images-title">
+                            <h2>Scenery</h2>
+                        </div>
+                        </a>
                     </div>
-                    </a>
-                </div>
-                <div class="images">
-                    <a href="../pages/games.html#img-gallery" ><img src="../imgs/rb2.png" alt=Games">
-                    <div class="images-title">
-                        <h2>Games</h2>
+                    <div class="images">
+                        <a href="../pages/games.html#img-gallery" ><img src="../imgs/rb2.png" alt=Games">
+                        <div class="images-title">
+                            <h2>Games</h2>
+                        </div>
+                        </a>
                     </div>
-                    </a>
-                </div>
-                <div class="images">
-                    <a href="../pages/memories.html#img-gallery" ><img src="../imgs/m1.jpg" alt="Memories">
-                    <div class="images-title">
-                        <h2>Memories</h2>
+                    <div class="images">
+                        <a href="../pages/memories.html#img-gallery" ><img src="../imgs/m1.jpg" alt="Memories">
+                        <div class="images-title">
+                            <h2>Memories</h2>
+                        </div>
+                        </a>
                     </div>
-                    </a>
                 </div>
-            </div>
-        </section>
+            </section>
+        </main>
 
         <footer>
             <p>"Life has got all those twists and turns. You've got to hold on tight and off you go."</p>

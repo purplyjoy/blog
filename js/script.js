@@ -1,4 +1,4 @@
-//SEE MORE...
+//texts in blog page posts
 document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll('.life-blog, .interest-blog, .reflection-blog').forEach(blogSection => {
         const entries = [...blogSection.querySelectorAll('.blog-content')];
@@ -17,14 +17,16 @@ const toggleBtn = document.getElementById("sidebarToggle");
 const sidebar = document.getElementById("sidebar");
 const sidebarIcon = document.getElementById("sidebarIcon");
 
-toggleBtn.addEventListener("click", () => {
-    sidebar.classList.toggle("show");
-    if (sidebar.classList.contains("show")) {
-        sidebarIcon.src = "../imgs/close-symbol.png";
-    } else {
-        sidebarIcon.src = "../imgs/sidebar-icon.png";
-    }
-});
+if (toggleBtn && sidebar && sidebarIcon) {
+    toggleBtn.addEventListener("click", () => {
+        sidebar.classList.toggle("show");
+        if (sidebar.classList.contains("show")) {
+            sidebarIcon.src = "../imgs/close-symbol.png";
+        } else {
+            sidebarIcon.src = "../imgs/sidebar-icon.png";
+        }
+    });
+}
 
 //SIDEBAR
 const sections = document.querySelectorAll("section[id]");
@@ -68,7 +70,10 @@ window.addEventListener("scroll", () => {
     if (atBottom) {
         sidebarLinks.forEach(link => link.classList.remove("active"));
 
-        document.querySelector('.sidebar a[href="#gallery"]')
-            .classList.add("active");
+        const galleryLink = document.querySelector('.sidebar a[href="#gallery"]');
+
+        if (galleryLink) {
+            galleryLink.classList.add("active");
+        }
     }
 });
