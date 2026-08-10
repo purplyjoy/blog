@@ -1,1 +1,1 @@
-this is my blog website
+This is my personal blog website
