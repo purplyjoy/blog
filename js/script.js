@@ -1,8 +1,23 @@
+//blog posts in home page show the most recent blog
+document.querySelectorAll(".boxes").forEach(boxes => {
+    const entries = Array.from(boxes.querySelectorAll(".box"));
+
+    entries.sort((a, b) => {
+        return new Date(b.dataset.date) - new Date(a.dataset.date);
+    });
+
+    entries.forEach(entry => boxes.appendChild(entry));
+});
+
 //texts in blog page posts
 document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll('.life-blog, .interest-blog, .reflection-blog').forEach(blogSection => {
         const entries = [...blogSection.querySelectorAll('.blog-content')];
-        entries.reverse().forEach(entry => blogSection.appendChild(entry));
+        entries.sort((a, b) => {
+            return new Date(b.dataset.date) - new Date(a.dataset.date);
+        });
+
+        entries.forEach(entry => blogSection.appendChild(entry));
     });
 
     document.querySelectorAll('.blog-content').forEach(entry => {
