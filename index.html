@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Home</title>
-    <link rel="icon" type="image/png" href="imgs/logo.png">
+        <link rel="icon" type="image/png" href="imgs/logo.png">
         <link rel="stylesheet" href="css/style.css">
     </head>
     
@@ -13,7 +13,8 @@
         <!-- navigation bar -->
         <nav>
             <a href="index.html"><img src="imgs/logo.png" alt="Logo"></a>
-            <ul class="nav-links">
+            
+            <ul class="nav-links" id="navLinks">
 
                 <!-- pages -->
                 <li><a class="active" href="index.html">Home</a></li>
@@ -28,6 +29,8 @@
                     <img src="imgs/ig-logo.png" alt="Instagram">
                 </a></li>
             </ul>
+
+            <div class="hamburger-icon" id="hamburger">☰</div>
         </nav>
 
         <main>
@@ -83,47 +86,52 @@
                 <!--Interests & Hobbies blog posts-->
                 <div class="blog-posts">
                     <h2>Interests & Hobbies</h2>
-                    <div class="boxes">
-                        <div class="box" data-date="2026-02-24">
-                            <a href="pages/scenery.html"><img src="imgs/mayon.jpg" alt="Mayon Volcano" class="photo"></a>
-                            <h3>Scenery</h3>
-                            <h4>Joyce Llorera</h4>
-                            <p>Feb 24, 2026</p>
-                            <img src="imgs/heart.png" alt="Heart React" class="heart-icon">
-                        </div>
+                    
+                    <div class="boxes-wrapper">
+                        <button class="scroll-btn left" id="leftBtn">&#10094;</button>
+                        <div class="boxes" id="boxes">
+                            <div class="box" data-date="2026-02-24">
+                                <a href="pages/scenery.html"><img src="imgs/mayon.jpg" alt="Mayon Volcano" class="photo"></a>
+                                <h3>Scenery</h3>
+                                <h4>Joyce Llorera</h4>
+                                <p>Feb 24, 2026</p>
+                                <img src="imgs/heart.png" alt="Heart React" class="heart-icon">
+                            </div>
 
-                        <div class="box" data-date="2026-02-25">
-                            <a href="pages/games.html"><img src="imgs/ml4.jpg" alt="Mobile Legends" class="photo"></a>
-                            <h3>Online Games</h3>
-                            <h4>Joyce Llorera</h4>
-                            <p>Feb 25, 2026</p>
-                            <img src="imgs/heart.png" alt="Heart React" class="heart-icon">
-                        </div>
+                            <div class="box" data-date="2026-02-25">
+                                <a href="pages/games.html"><img src="imgs/ml4.jpg" alt="Mobile Legends" class="photo"></a>
+                                <h3>Online Games</h3>
+                                <h4>Joyce Llorera</h4>
+                                <p>Feb 25, 2026</p>
+                                <img src="imgs/heart.png" alt="Heart React" class="heart-icon">
+                            </div>
 
-                        <div class="box" data-date="2026-02-26">
-                            <a href="pages/memories.html"><img src="imgs/memories.jpg" alt="Memories" class="photo"></a>
-                            <h3>Memory Keeping</h3>
-                            <h4>Joyce Llorera</h4>
-                            <p>Feb 26, 2026</p>
-                            <img src="imgs/heart.png" alt="Heart React" class="heart-icon">
-                        </div>
+                            <div class="box" data-date="2026-02-26">
+                                <a href="pages/memories.html"><img src="imgs/memories.jpg" alt="Memories" class="photo"></a>
+                                <h3>Memory Keeping</h3>
+                                <h4>Joyce Llorera</h4>
+                                <p>Feb 26, 2026</p>
+                                <img src="imgs/heart.png" alt="Heart React" class="heart-icon">
+                            </div>
 
-                        <div class="box" data-date="2026-02-27">
-                            <a href="pages/blog.html#diary-blog"><img src="imgs/sunset.jpg" alt="Sunset" class="photo"></a>
-                            <h3>Diary</h3>
-                            <h4>Joyce Llorera</h4>
-                            <p>Feb 27, 2026</p>
-                            <img src="imgs/heart.png" alt="Heart React" class="heart-icon">
-                        </div>
+                            <div class="box" data-date="2026-02-27">
+                                <a href="pages/blog.html#diary-blog"><img src="imgs/sunset.jpg" alt="Sunset" class="photo"></a>
+                                <h3>Diary</h3>
+                                <h4>Joyce Llorera</h4>
+                                <p>Feb 27, 2026</p>
+                                <img src="imgs/heart.png" alt="Heart React" class="heart-icon">
+                            </div>
 
-                        <div class="box" data-date="2026-02-27">
-                            <a href="pages/blog.html#music-blog"><img src="imgs/music.jpg" alt="Music" class="photo"></a>
-                            <h3>Music</h3>
-                            <h4>Joyce Llorera</h4>
-                            <p>Feb 27, 2026</p>
-                            <img src="imgs/heart.png" alt="Heart React" class="heart-icon">
+                            <div class="box" data-date="2026-02-27">
+                                <a href="pages/blog.html#music-blog"><img src="imgs/music.jpg" alt="Music" class="photo"></a>
+                                <h3>Music</h3>
+                                <h4>Joyce Llorera</h4>
+                                <p>Feb 27, 2026</p>
+                                <img src="imgs/heart.png" alt="Heart React" class="heart-icon">
+                            </div>
+                            
                         </div>
-                    </div>
+                        <button class="scroll-btn right" id="rightBtn">&#10095;</button>
                 </div> 
 
                 <!--Reflections blog posts-->
@@ -166,23 +174,17 @@
             <div class="gallery-content">
                 <div class="images">
                     <a href="pages/scenery.html#img-gallery" ><img src="imgs/scene3.jpg" alt="Scenery">
-                    <div class="images-title">
-                        <h2>Scenery</h2>
-                    </div>
+                    <h2 class="images-title">Scenery</h2>
                     </a>
                 </div>
                 <div class="images">
                     <a href="pages/games.html#img-gallery" ><img src="imgs/rb2.png" alt=Games">
-                    <div class="images-title">
-                        <h2>Games</h2>
-                    </div>
+                    <h2 class="images-title">Games</h2>
                     </a>
                 </div>
                 <div class="images">
                     <a href="pages/memories.html#img-gallery" ><img src="imgs/m1.jpg" alt="Memories">
-                    <div class="images-title">
-                        <h2>Memories</h2>
-                    </div>
+                    <h2 class="images-title">Memories</h2>
                     </a>
                 </div>
             </div>

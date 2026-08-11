@@ -82,6 +82,31 @@ nav img {
     height: 20px;
 }
 
+.hamburger-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none !important;
+        flex-direction: column;
+        position: absolute;
+        top: 40px;
+        right: 60px;
+        padding: 20px;
+    }
+
+    .nav-links.active {
+        display: flex !important;
+    }
+
+    .hamburger-icon {
+        display: block;
+    }
+}
+
 /*INTRO-HOME*/
 
 .hero-section {
@@ -154,7 +179,7 @@ nav img {
 
 .blog-posts h2 {
     font-family:'Courier New', Courier, monospace;
-    margin: 50px 0 0 100px;
+    margin: 50px 0 0 50px;
     opacity: 0;
     animation: fadeIn 0.6s ease-out forwards;
     animation-delay: 0.2s; 
@@ -162,11 +187,11 @@ nav img {
 
 .boxes {
     display: flex;
-    gap: 20px;
+    gap: 1em;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-    padding: 0 0 10px 100px;
-    scroll-padding-left: 20px;
+    padding: 0 0 10px 50px;
+    scroll-padding-left: 200px;
     position: relative; 
     opacity: 0;
     animation: fadeIn 0.6s ease-out forwards;
@@ -180,8 +205,7 @@ nav img {
 .box {
     margin-top: 30px;
     min-width: 280px;
-    flex-shrink: 0;
-    scroll-snap-align: start;  
+    flex-shrink: 0; 
     transition: 1s;
     z-index: 1;
     border: 2px solid #cdc5f3;
@@ -241,6 +265,43 @@ nav img {
     z-index: 10;
 }
 
+.boxes-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background: #b785ea;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease;
+}
+
+.scroll-btn:hover {
+    background: #9953eb;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.scroll-btn.left {
+    left: 10px;
+}
+
+.scroll-btn.right {
+    right: 10px;
+}
+
 .all-posts {
     display: block;
     text-align: right;
@@ -285,7 +346,7 @@ footer p {
 
 /*BLOG PAGE*/
 
-/* SIDE BAR */
+/* sidebar */
 .sidebar-container {
     position: fixed;
     top: 150px;
@@ -297,10 +358,15 @@ footer p {
 }
 
 .sidebar-toggle {
-    background: transparent;
+    background: #b87bee;
     border: none;
     cursor: pointer;
     transition: .3s;
+    font-size: 16px;
+    padding: 8px;
+    background-image: linear-gradient(to bottom, #ceaef3, #c297ee);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(72, 42, 102, 0.35);
 }
 
 .sidebar-toggle:hover {
@@ -313,20 +379,19 @@ footer p {
 }
 
 .sidebar {
-    position: absolute;
+    position: fixed;
     text-align: left;
     margin: 20px;
     margin-right: 20px;
-    position: fixed;
-    top: 150px;
-    right: 60px;
-    width: 250px;
+    top: 170px;
+    right: 5px;
+    width: 200px;
     padding: 0 20px 0 0;
     border-radius: 20px;
     visibility: hidden;
-    transform: translateX(30px) scale(0.95);
-    transition: all .35s ease;
     opacity: 0;
+    transform: translateY(-20px) scale(0.95);
+    transition: all 0.35s ease;
 }
 
 .sidebar.show {
@@ -340,7 +405,7 @@ footer p {
     display: block;
     font-size: 14px;
     font-weight: 600;
-    margin: 10px;
+    margin: 5px;
     padding: 10px;
     background: linear-gradient(135deg, #b785ea, #b485e3);
     color: white;
@@ -539,9 +604,6 @@ footer p {
     right: 0;
     width: 100%;
     text-align: center;
-}
-
-.images-title h2 {
     font-size: 20px;
     color: white;
     opacity: 0;
@@ -550,7 +612,7 @@ footer p {
     text-shadow: 0 2px 6px rgba(0,0,0,0.6);
 }
 
-.images:hover .images-title h2 {
+.images:hover .images-title {
     opacity: 1;
     transform: translateY(0);
 }
@@ -819,8 +881,6 @@ footer p {
         width: 90%;
     }
 
-    
-
     .text1 {
         margin-left: 20px;
         font-size: 15px;
@@ -849,13 +909,13 @@ footer p {
 @media (max-width: 768px) {
 
     .sidebar-container {
-        right: 18px;
-        top: 100px;
+        right: 50px;
+        top: 200px;
     }
 
     .sidebar {
-        right: 18px;
-        top: 100px;
+        right: 10px;
+        top: 220px;
     }
 
     /* NAV */
@@ -878,14 +938,9 @@ footer p {
 
     .images-title {
         position: absolute;
-        top: 10px;
-        left: 0;
-        right: 0;
+        top: 50%;
         width: 100%;
         text-align: center;
-    }
-
-    .images-title h2 {
         opacity: 1;
         transform: translateY(0);
     }
@@ -1139,5 +1194,4 @@ footer p {
     .get-in-touch {
         font-size: 20px;
     }
-
 }

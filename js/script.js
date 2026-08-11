@@ -1,3 +1,16 @@
+//navigation
+const hamburger = document.getElementById("hamburger");
+const navLinks = document.getElementById("navLinks");
+
+hamburger.addEventListener("click", function () {
+    navLinks.classList.toggle("active");
+    if (navLinks.classList.contains("active")) {
+        hamburger.textContent = "X";
+    } else {
+        hamburger.textContent = "☰";
+    }
+});
+
 //blog posts in home page show the most recent blog
 document.querySelectorAll(".boxes").forEach(boxes => {
     const entries = Array.from(boxes.querySelectorAll(".box"));
@@ -9,7 +22,7 @@ document.querySelectorAll(".boxes").forEach(boxes => {
     entries.forEach(entry => boxes.appendChild(entry));
 });
 
-//texts in blog page posts
+//text contents in blog page posts
 document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll('.life-blog, .interest-blog, .reflection-blog').forEach(blogSection => {
         const entries = [...blogSection.querySelectorAll('.blog-content')];
@@ -30,16 +43,10 @@ document.addEventListener("DOMContentLoaded", () => {
 //SIDEBAR BUTTON
 const toggleBtn = document.getElementById("sidebarToggle");
 const sidebar = document.getElementById("sidebar");
-const sidebarIcon = document.getElementById("sidebarIcon");
 
-if (toggleBtn && sidebar && sidebarIcon) {
-    toggleBtn.addEventListener("click", () => {
+if (toggleBtn && sidebar) {
+     toggleBtn.addEventListener("click", () => {
         sidebar.classList.toggle("show");
-        if (sidebar.classList.contains("show")) {
-            sidebarIcon.src = "../imgs/close-symbol.png";
-        } else {
-            sidebarIcon.src = "../imgs/sidebar-icon.png";
-        }
     });
 }
 
@@ -91,4 +98,29 @@ window.addEventListener("scroll", () => {
             galleryLink.classList.add("active");
         }
     }
+});
+
+//scroll button in home page (left and right)
+const boxes = document.getElementById("boxes");
+const leftBtn = document.getElementById("leftBtn");
+const rightBtn = document.getElementById("rightBtn");
+
+const box = boxes.querySelector(".box");
+
+rightBtn.addEventListener("click", function () {
+    const scrollAmount = (box.offsetWidth + 16) * 3;
+
+    boxes.scrollBy({
+        left: scrollAmount,
+        behavior: "smooth"
+    });
+});
+
+leftBtn.addEventListener("click", function () {
+    const scrollAmount = (box.offsetWidth + 16) * 3;
+
+    boxes.scrollBy({
+        left: -scrollAmount,
+        behavior: "smooth"
+    });
 });
