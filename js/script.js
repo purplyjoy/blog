@@ -108,7 +108,7 @@ const rightBtn = document.getElementById("rightBtn");
 const box = boxes.querySelector(".box");
 
 rightBtn.addEventListener("click", function () {
-    const scrollAmount = (box.offsetWidth + 16) * 3;
+    const scrollAmount = (box.offsetWidth + 16) * 2;
 
     boxes.scrollBy({
         left: scrollAmount,
@@ -117,7 +117,7 @@ rightBtn.addEventListener("click", function () {
 });
 
 leftBtn.addEventListener("click", function () {
-    const scrollAmount = (box.offsetWidth + 16) * 3;
+    const scrollAmount = (box.offsetWidth + 16) * 2;
 
     boxes.scrollBy({
         left: -scrollAmount,
