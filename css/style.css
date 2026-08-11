@@ -739,7 +739,7 @@ footer p {
 .scenery-content h1 {
     justify-self: left;
     margin-top: 20px;
-    margin-left: 130px;
+    margin-left: 100px;
     font-size: 25px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
@@ -802,6 +802,49 @@ footer p {
     object-fit: cover;
     display: block; 
 }
+
+@media (max-width: 1000px) {
+
+    /* INDIVIDUAL BLOG PAGE */
+    .scenery-container {
+        width: 100%;
+    }
+
+    .scenery-content h1 {
+        margin-left: 20px;
+    }
+
+    .scenery-content img {
+        height: 300px;
+        width: 90%;
+    }
+
+    
+
+    .text1 {
+        margin-left: 20px;
+        font-size: 15px;
+    }
+
+    .text2 {
+        margin-left: 20px;
+    }
+
+    .text3 {
+        margin-left: 20px;
+        font-size: 20px;
+    }
+
+    .scene-text {
+        margin: 20px 20px;
+    }
+
+    .pic {
+        width: 140px;
+        height: 140px;
+    }
+}
+
 
 @media (max-width: 768px) {
 
