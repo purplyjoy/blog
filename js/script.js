@@ -2,16 +2,18 @@
 const hamburger = document.getElementById("hamburger");
 const navLinks = document.getElementById("navLinks");
 
-hamburger.addEventListener("click", function () {
-    navLinks.classList.toggle("active");
-    if (navLinks.classList.contains("active")) {
-        hamburger.textContent = "X";
-    } else {
-        hamburger.textContent = "☰";
-    }
-});
+if (hamburger && navLinks) {
+    hamburger.addEventListener("click", function () {
+        navLinks.classList.toggle("active");
+        if (navLinks.classList.contains("active")) {
+            hamburger.textContent = "X";
+        } else {
+            hamburger.textContent = "☰";
+        }
+    });
+}
 
-//blog posts in home page show the most recent blog
+//sorts blog posts in home page from newest to oldest
 document.querySelectorAll(".boxes").forEach(boxes => {
     const entries = Array.from(boxes.querySelectorAll(".box"));
 
@@ -22,7 +24,8 @@ document.querySelectorAll(".boxes").forEach(boxes => {
     entries.forEach(entry => boxes.appendChild(entry));
 });
 
-//text contents in blog page posts
+//sorts blog posts in blog page from newest to oldest 
+//expands expandable preview text
 document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll('.life-blog, .interest-blog, .reflection-blog').forEach(blogSection => {
         const entries = [...blogSection.querySelectorAll('.blog-content')];
@@ -40,6 +43,17 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+//sorts recent blogs in individual blog pages from newest to oldest
+document.querySelectorAll(".explore").forEach(boxes => {
+    const entries = Array.from(boxes.querySelectorAll(".explore-content"));
+
+    entries.sort((a, b) => {
+        return new Date(b.dataset.date) - new Date(a.dataset.date);
+    });
+
+    entries.forEach(entry => boxes.appendChild(entry));
+});
+
 //SIDEBAR BUTTON
 const toggleBtn = document.getElementById("sidebarToggle");
 const sidebar = document.getElementById("sidebar");
@@ -50,77 +64,86 @@ if (toggleBtn && sidebar) {
     });
 }
 
-//SIDEBAR
+//SIDEBAR active section
 const sections = document.querySelectorAll("section[id]");
 const sidebarLinks = document.querySelectorAll(".sidebar a");
 
-const observer = new IntersectionObserver((entries) => {
-    let visibleSection = null;
+if (sections.length > 0 && sidebarLinks.length > 0) {
+    const observer = new IntersectionObserver((entries) => {
+        let visibleSection = null;
 
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            if (
-                !visibleSection ||
-                entry.intersectionRatio > visibleSection.intersectionRatio
-            ) {
-                visibleSection = entry;
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                if (
+                    !visibleSection ||
+                    entry.intersectionRatio > visibleSection.intersectionRatio
+                ) {
+                    visibleSection = entry;
+                }
+            }
+        });
+
+        if (visibleSection) {
+            sidebarLinks.forEach(link => link.classList.remove("active"));
+
+            const activeLink = document.querySelector(
+                `.sidebar a[href="#${visibleSection.target.id}"]`
+            );
+
+            if (activeLink) {
+                activeLink.classList.add("active");
+            }
+        }
+    }, {
+        threshold: [0.2, 0.4, 0.6, 0.8]
+    });
+
+    sections.forEach(section => observer.observe(section));
+}
+
+//sidebar - bottom of page
+if (sidebarLinks.length > 0) {
+
+    window.addEventListener("scroll", () => {
+        const atBottom =
+            window.innerHeight + window.scrollY >= document.body.offsetHeight - 20;
+
+        if (atBottom) {
+            sidebarLinks.forEach(link => link.classList.remove("active"));
+
+            const galleryLink = document.querySelector('.sidebar a[href="#gallery"]');
+
+            if (galleryLink) {
+                galleryLink.classList.add("active");
             }
         }
     });
-
-    if (visibleSection) {
-        sidebarLinks.forEach(link => link.classList.remove("active"));
-
-        const activeLink = document.querySelector(
-            `.sidebar a[href="#${visibleSection.target.id}"]`
-        );
-
-        if (activeLink) {
-            activeLink.classList.add("active");
-        }
-    }
-}, {
-    threshold: [0.2, 0.4, 0.6, 0.8]
-});
-
-sections.forEach(section => observer.observe(section));
-
-window.addEventListener("scroll", () => {
-    const atBottom =
-        window.innerHeight + window.scrollY >= document.body.offsetHeight - 20;
-
-    if (atBottom) {
-        sidebarLinks.forEach(link => link.classList.remove("active"));
-
-        const galleryLink = document.querySelector('.sidebar a[href="#gallery"]');
-
-        if (galleryLink) {
-            galleryLink.classList.add("active");
-        }
-    }
-});
+}
 
 //scroll button in home page (left and right)
 const boxes = document.getElementById("boxes");
 const leftBtn = document.getElementById("leftBtn");
 const rightBtn = document.getElementById("rightBtn");
 
-const box = boxes.querySelector(".box");
+if (boxes && leftBtn && rightBtn) {
 
-rightBtn.addEventListener("click", function () {
-    const scrollAmount = (box.offsetWidth + 16) * 2;
+    const box = boxes.querySelector(".box");
 
-    boxes.scrollBy({
-        left: scrollAmount,
-        behavior: "smooth"
+    rightBtn.addEventListener("click", function () {
+        const scrollAmount = (box.offsetWidth + 16) * 2;
+
+        boxes.scrollBy({
+            left: scrollAmount,
+            behavior: "smooth"
+        });
     });
-});
 
-leftBtn.addEventListener("click", function () {
-    const scrollAmount = (box.offsetWidth + 16) * 2;
+    leftBtn.addEventListener("click", function () {
+        const scrollAmount = (box.offsetWidth + 16) * 2;
 
-    boxes.scrollBy({
-        left: -scrollAmount,
-        behavior: "smooth"
+        boxes.scrollBy({
+            left: -scrollAmount,
+            behavior: "smooth"
+        });
     });
-});
+}
