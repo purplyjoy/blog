@@ -64,6 +64,12 @@ const sidebar = document.getElementById("sidebar");
 if (toggleBtn && sidebar) {
      toggleBtn.addEventListener("click", () => {
         sidebar.classList.toggle("show");
+
+        if (sidebar.classList.contains("show")) {
+            toggleBtn.textContent = "▶";
+        } else {
+            toggleBtn.textContent = "◀";
+        }
     });
 }
 
