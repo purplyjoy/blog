@@ -228,7 +228,7 @@ nav img {
     flex-shrink: 0; 
     transition: 1s;
     z-index: 1;
-    border: 2px solid #cdc5f3;
+    border: 2px solid #ecdaff;
 }
 
 .box:hover {
@@ -299,7 +299,7 @@ nav img {
     height: 40px;
     border: none;
     border-radius: 50%;
-    background: #b785ea;
+    background: #ecdaff;
     color: white;
     font-size: 25px;
     cursor: pointer;
@@ -431,26 +431,29 @@ footer p {
     font-weight: 600;
     margin: 5px;
     padding: 10px;
-    background: linear-gradient(135deg, #b785ea, #b485e3);
+    background: linear-gradient(135deg, #ead7ff, #d8baff);
     color: white;
     border-radius: 15px;
     transition: all 0.3s ease;
-    box-shadow: 0 5px 15px rgba(180, 140, 220, 0.35);
+    box-shadow: 0 5px 15px rgba(190, 150, 220, 0.25);
 }
 
 .sidebar a:hover {
     transform: translateX(-10px) scale(1);
-    background: linear-gradient(135deg, #a15aee, #b87bee);
-    box-shadow: 0 10px 25px rgba(180, 140, 220, 0.5);
+    background: linear-gradient(135deg, #dfc4ff, #cfa5f5);
+    box-shadow: 0 10px 25px rgba(190, 150, 220, 0.35);
+    color: white;
 }
 
 .sidebar a.active {
-    background: linear-gradient(135deg, #9953eb, #b87bee);
+    background: linear-gradient(135deg, #d6b2f5, #c79bea);
+    color: white;
 }
 
 .sidebar:hover a.active:not(:hover) {
-    background: linear-gradient(135deg, #b785ea, #b485e3);
-    box-shadow: 0 5px 15px rgba(180, 140, 220, 0.35);
+    background: linear-gradient(135deg, #e4ccfa, #d8baff);
+    color: white;
+    box-shadow: 0 5px 15px rgba(190, 150, 220, 0.25);
 }
 
 .sidebar a.active:hover {
@@ -503,7 +506,7 @@ footer p {
     width: min(100%, 1000px);
     height: 400px;
     margin: 0 auto;
-    border: 2px solid #d0aef3;
+    border: 2px solid #ecdaff;
     scroll-snap-type: x mandatory;
 }
 
@@ -694,7 +697,7 @@ footer p {
 }
 
 .box-name {
-    border: 2px solid rgb(149, 121, 203); 
+    border: 2px solid #e2c7ff; 
     width: 50%;
     height: 40px;
     margin-top: 100px;
@@ -707,7 +710,7 @@ footer p {
 }
 
 .box-email {
-    border: 2px solid rgb(149, 121, 203);
+    border: 2px solid #e2c7ff;
     width: 50%;
     height: 40px;
     margin-top: 10px;
@@ -720,7 +723,7 @@ footer p {
 }
 
 .box-message {
-    border: 2px solid rgb(149, 121, 203);
+    border: 2px solid #e2c7ff;
     width: 50%;
     height: 150px;
     margin-top: 10px;
@@ -731,7 +734,7 @@ footer p {
 }
 
 .box-send {
-    background-color: #9757d6;
+    background-color: #dab7ff;
     width: 50%;
     height: 40px;
     margin-top: 10px;
@@ -815,7 +818,7 @@ footer p {
     place-items: center;
     display: grid;
     margin: 50px auto 100px auto; 
-    border: 2px solid #cdc5f3;
+    border: 2px solid #ecdaff;
     overflow: hidden;
 }
 
