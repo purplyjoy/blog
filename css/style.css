@@ -38,6 +38,10 @@ nav {
     z-index: 999;
 }
 
+nav.nav-open {
+    padding-bottom: 100px;
+}
+
 nav img {
     width: 50px;
     opacity: 0;

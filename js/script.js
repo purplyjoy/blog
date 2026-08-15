@@ -1,10 +1,13 @@
 //navigation
 const hamburger = document.getElementById("hamburger");
 const navLinks = document.getElementById("navLinks");
+const nav = document.querySelector("nav");
 
 if (hamburger && navLinks) {
     hamburger.addEventListener("click", function () {
         navLinks.classList.toggle("active");
+        nav.classList.toggle("nav-open");
+        
         if (navLinks.classList.contains("active")) {
             hamburger.textContent = "X";
         } else {
