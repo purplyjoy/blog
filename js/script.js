@@ -130,30 +130,36 @@ if (sidebarLinks.length > 0) {
 }
 
 //scroll button in home page (left and right)
-const boxes = document.getElementById("boxes");
-const leftBtn = document.getElementById("leftBtn");
-const rightBtn = document.getElementById("rightBtn");
+const boxes = document.querySelectorAll(".boxes");
 
-if (boxes && leftBtn && rightBtn) {
+if (boxes.length) {
+    boxes.forEach((boxesContainer) => {
+        const wrapper = boxesContainer.closest(".boxes-wrapper");
 
-    const box = boxes.querySelector(".box");
+        const leftBtn = wrapper.querySelector(".scroll-btn.left");
+        const rightBtn = wrapper.querySelector(".scroll-btn.right");
+        const box = boxesContainer.querySelector(".box");
 
-    rightBtn.addEventListener("click", function () {
-        const scrollAmount = (box.offsetWidth + 16) * 2;
+        if (leftBtn && rightBtn && box) {
 
-        boxes.scrollBy({
-            left: scrollAmount,
-            behavior: "smooth"
-        });
-    });
+            rightBtn.addEventListener("click", function () {
+                const scrollAmount = (box.offsetWidth + 16) * 2;
 
-    leftBtn.addEventListener("click", function () {
-        const scrollAmount = (box.offsetWidth + 16) * 2;
+                boxesContainer.scrollBy({
+                    left: scrollAmount,
+                    behavior: "smooth"
+                });
+            });
 
-        boxes.scrollBy({
-            left: -scrollAmount,
-            behavior: "smooth"
-        });
+            leftBtn.addEventListener("click", function () {
+                const scrollAmount = (box.offsetWidth + 16) * 2;
+
+                boxesContainer.scrollBy({
+                    left: -scrollAmount,
+                    behavior: "smooth"
+                });
+            });
+        }
     });
 }
 
